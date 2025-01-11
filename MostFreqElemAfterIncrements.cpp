@@ -9,6 +9,9 @@ Return the maximum possible frequency of an element after performing at most k o
 #include <bits/stdc++.h>
 
 // Sliding Window approach
+// Will find the maximum possible window till current index
+// If window can't be increased, it will continue to increase left and right to maintain the gap at each iter
+// until window can be increased by increasing right
 class Solution {
 public:
   int maxFrequency(vector<int>& nums, int k) {
