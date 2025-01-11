@@ -6,6 +6,8 @@ You are given an integer array nums and an integer k. In one operation, you can 
 Return the maximum possible frequency of an element after performing at most k operations.
 */
 
+#include <bits/stdc++.h>
+
 // Sliding Window approach
 class Solution {
 public:
