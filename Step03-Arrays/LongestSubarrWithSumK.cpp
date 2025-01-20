@@ -16,9 +16,20 @@ public:
     for (int i = 0; i < arr.size(); i++) {
       sum += arr[i];
       
-      if (map[sum-k] != NULL) {
-        
+      if (sum == k) {
+        max_size = max(max_size, i+1);
       }
+      
+      if (arr_sum.find(sum-k) != arr_sum.end()) {
+        max_size = max(max_size, i-arr_sum[sum-k]);
+      }
+      
+      if (arr_sum.find(sum) == arr_sum.end()) {
+        arr_sum[sum] = i;
+      }
+      
     }
+    
+    return max_size;
   }
 };
